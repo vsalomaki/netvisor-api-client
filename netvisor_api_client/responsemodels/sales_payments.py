@@ -6,10 +6,14 @@ netvisor.responsemodels.sales_payments
 :license: MIT, see LICENSE for more details.
 """
 
-from ..schemas import SalesPaymentListSchema
 from .base import Response
+from ..schemas import RepliesSchema, SalesPaymentListSchema
 
 
 class SalesPaymentListResponse(Response):
     schema_cls = SalesPaymentListSchema
     tag_name = "sales_payment_list"
+
+class SalesPaymentCreateResponse(Response):
+    schema_cls = RepliesSchema
+    tag_name = 'replies'
